@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Kumbh Sans';
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
+    margin: 10em 0;
+}
+.container {
+    width: 350px;
+    padding: 2rem;
+    background-color: var(--light-grayish-blue);
+    border-radius: 1.5rem;
+    position: relative;
+    font-size: 14px;
+    box-shadow: 0px 15px 15px -8px rgba(59,59,135,0.81);
+}
+.images__mobile {
+    width: 85%;
+    display: block;
+    margin-top: -8.8rem;
+    margin-left: 1.3rem;
+}
+.pattern__mobile {
+    display: block;
+    position: relative;
+    bottom: 5rem;
+}
+.images__desktop {
+    display: none;
+}
+.faq__container {
+    margin-top: -3rem;
+}
+.toggle {
+    padding: 1rem 0;
+    border-bottom: 1px solid hsla(240, 6%, 50%, 0.2);
+}
+.toggle__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--very-dark-desaturated-blue);
+}
+.toggle__title {
+    color: var(--very-dark-desaturated-blue);
+}
+.toggle__title:hover {
+    color: var(--soft-red);
+    transition: 0.2s;
+}
+.toggle__text {
+    color: var(--dark-grayish-blue);
+    margin-right: 2rem;
+    margin-top: 1rem;  
+    display: none; 
+}
+/* SHOW -START- */
+.show .toggle__text {
+    display: flex;  
+}
+.show .toggle__title {
+    font-weight: 700;
+}
+.show .toggle__header img{
+    transition: all 0.3s linear;
+    transform: rotate(180deg);
+}
+/* SHOW -END- */
+/* CREDITS -START- */
+.attribution {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: var(--very-dark-desaturated-blue);
+}   
+.attribution a {
+    text-decoration: none;
+    color: white;
+}
+.attribution a:hover {
+    color: var(--soft-red);
+    font-weight: 700;
+}
+/* CREDITS -END- */
+@media screen and (min-width:768px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1050px;
+        padding: 5rem 0;
+    }
+    body {
+        height: 100vh;
+        margin: 0em 0;
+    }
+    .faq__container {
+        margin-top: 0rem;
+        padding: 0rem 5rem;
+        width: 60%;
+    }
+    .images__mobile {
+        display: none;
+    }
+    .images__desktop {
+        display: flex;
+        position: relative;
+    }
+    .woman__desktop {
+        overflow-x: hidden;
+    }
+    .woman {
+        display: block;
+        /* margin-top: 4.7rem; */
+        margin-left: -5.5rem;
+    }
+    .image__box {
+        position: absolute;
+        bottom: 15%;
+        left: -25%;
+    }
+    .title {
+        text-align: left;
+    }
+    .pattern__desktop {
+        position: absolute;
+        top: -10%;
+        left: -15%;
+    }
+    .pattern__desktop img {
+        width: 450px;
+        height: 450px;
+    }
+}
